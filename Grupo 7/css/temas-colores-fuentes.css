@@ -1,0 +1,28 @@
+﻿/* URL Paleta de colores LIGHT: https://www.coloreasily.com/?colors=142108-fafdf7-02d406-ffd2d2-040297 */
+/* URL Paleta de colores DARK: https://www.coloreasily.com/?colors=f9f6f0-1f1b14-2f4c7f-1a6532-3e65a8 */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab');
+@import url('https://fonts.googleapis.com/css2?family=Crete+Round');
+@import url('https://fonts.googleapis.com/css2?family=Hind+Madurai');
+
+:root {
+   --light-color-texto: #142108;
+   --light-color-fondo: #fafdf7;
+   --light-color-acento-1: #02d406;
+   --light-color-acento-2: #ffd2d2;
+   --light-color-acento-3: #040297;
+   --dark-color-texto: #f9f6f0;
+   --dark-color-fondo: #1f1b14;
+   --dark-color-acento-1: #2f4c7f;
+   --dark-color-acento-2: #1a6532;
+   --dark-color-acento-3: #3e65a8;
+}
+
+ .light-theme {
+   color: var(--light-color-texto);
+   background-color: var(--light-color-fondo);
+}
+
+.dark-theme {
+   color: var(--dark-color-texto);
+   background-color: var(--dark-color-fondo);
+}
