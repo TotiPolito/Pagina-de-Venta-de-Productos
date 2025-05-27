@@ -94,6 +94,35 @@ form{
 
 }
 
+.cajaDeDatos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    }
+    
+    .divCaja1 { grid-area: 1 / 1 / 2 / 2; }
+    .divCaja2 { grid-area: 1 / 3 / 2 / 4; }
+    .divCaja3 { grid-area: 2 / 1 / 3 / 2; }
+    .divCaja4 { grid-area: 2 / 2 / 3 / 3; }
+    .divCaja5 { grid-area: 2 / 3 / 3 / 4; }
+    .divCaja6 { grid-area: 3 / 1 / 4 / 2; }
+    .divCaja7 { grid-area: 3 / 3 / 4 / 4; }
+
+.footer{
+    margin-top: 10px;
+    background-color: #2f4c7f ;
+    border: none;
+}
+
+.contenidoFooter{
+    display: flex;
+    justify-content: center;
+    color: bisque;
+
+}
+
 #nombre{ grid-area: nombre;}
 #apellido{grid-area: apellido;}
 

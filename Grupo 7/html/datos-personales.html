@@ -9,16 +9,19 @@
 </head>
 
 <body>
+
    <header class ="header">
       <div class="logo"> 
          <img id="imagenLogo" src="/Grupo 7/img/UnlamLogo.png" alt="">
       </div>
-      <div class="buscador"> <input type="text">
+      <div class="buscador">
+          <input type="text">
       </div>
       <div class="iconos"> 
          iconos
       </div>
    </header>
+
 <main>
 <article id="Articulo">
 
@@ -38,7 +41,7 @@
    <label id="Contraseña" for="contraseña">Contraseña</label>
    <p></p>
    <input type="password" id="password" name="password">
-   <img id="BotonVer" src="/Grupo 7/img/UnlamLogo.png" alt="">
+   <img id="botonVer" src="/Grupo 7/img/mostrar-contrasena.png" alt="">
    <p></p>
    </article>
 </form>
@@ -48,11 +51,40 @@
 
 <form id="formAbajo">
 
-   <label for="nombre">Nombre</label>
-   <input type="text" id="nombre" name="nombre">
+   <div class="cajaDeDatos">
+      <div class="divCaja1">   
+         <label for="nombre">Nombre</label>
+         <p></p>
+         <input type="text" id="nombre" name="nombre"> 
+      </div>
+      <div class="divCaja2">   
+         <label for="apellido" id="apellido">Apellido</label>
+         <p></p>
+         <input type="text" id="apellido" >  
+      </div>
+      <div class="divCaja3"> 
+         TipoDNI
+         <p></p>
+         <select multiple name="TipoDNI" id="TipoDNI"></select>
+        
+      </div>
+      <div class="divCaja4"> 
+      NroDNI
+      </div>
+      <div class="divCaja5"> 
+      FechaNacimiento   
+      </div>
+      <div class="divCaja6"> 
+      NroTelefono
+      </div>
+      <div class="divCaja7"> 
+      EmailSecundario   
+      </div>
+      </div>
 
-   <label for="apellido" id="apellido">Apellido</label>
-   <input type="text" id="apellido" > 
+
+
+
 
 
 </form>
@@ -61,5 +93,12 @@
 </article>
   
 </main>
+
+<footer class="footer">
+   <div class="contenidoFooter"> 
+      <p>Todos los derechos reservados</p>
+   </div>
+</footer>
+
 </body>
 </html>
