@@ -38,6 +38,11 @@ body {
     align-content: center;
 }
 
+#logo {
+   display: flex;
+   justify-content: center;
+}
+
 #buscador {
     display: flex;
     justify-content: center;

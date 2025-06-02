@@ -16,6 +16,7 @@ body {
    display: flex;
    height: 15vh;
    flex-wrap: wrap;
+   background-color: var(--fondo-blanco);
 }
 
 #encabezado-secundario > img{
@@ -31,7 +32,11 @@ body {
 .contenido-header {
    width: 33.3333%;
    height: 100%;
-   align-content: center;
+}
+
+#logo {
+   display: flex;
+   justify-content: center;
 }
 
 #buscador {
