@@ -16,6 +16,7 @@ body {
    display: flex;
    height: 15vh;
    flex-wrap: wrap;
+   background-color: var(--fondo-blanco);
 }
 
 #encabezado-secundario > img{
@@ -30,7 +31,12 @@ body {
 
 .contenido-header {
    width: 33.3333%;
-   align-content: center;
+   height: 100%;
+}
+
+#logo {
+   display: flex;
+   justify-content: center;
 }
 
 #buscador {
@@ -64,33 +70,57 @@ body {
 }
 
 #navegacion-categoria {
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: center;
+   display: grid;
+   width: 100%;
+   height: auto;
+   grid-template-columns: repeat(16, 1fr);
+   justify-items: center;
+   align-items: center;
    gap: 1em;
+   background-color: var(--fondo-blanco);
+   padding-top: 1em;
+   padding-bottom: 1em;
+}
+
+.a{
+   grid-column: 4 / 6;
+}
+
+.b{
+   grid-column: 6 / 8;
+}
+
+.c{
+   grid-column: 8 / 10;
+}
+
+.d{
+   grid-column: 10 / 12;
+}
+
+.e{
+   grid-column: 12 / 14;
 }
 
 #navegacion-categoria > a{
    /* margin: 0 0.5em 0 0.5em; */
    font-size: 1em;
    font-weight: 700;
-   color: var(--light-color-acento-1);
+   color: var(--light-color-texto);
    text-decoration: none;
-   border-radius: 5px;
+   /* border-radius: 5px;
    width: 170px;
-   height: 30px;
+   height: 30px; */
    text-align: center;
    align-content: center;
-   background-color: var(--light-color-acento-3);
+   /* background-color: var(--light-color-acento-3); */
 }
 
 #navegacion-categoria > a:hover{
    color: var(--light-color-acento-3);
-   background-color: var(--light-color-acento-1);
 }
 
 main {
-   margin: 2em;
    align-items: center;
    display: flex;
    flex-direction: column;
@@ -99,6 +129,7 @@ main {
 
 #seccion-categoria {
    margin-top: 2em;
+   margin-bottom: 2em;
    min-height: 720px;
    width: 75%;
    justify-content: center;
@@ -281,6 +312,38 @@ main {
       align-content: center;
       justify-content: center;
    }
+
+   #navegacion-categoria {
+   grid-template-columns: repeat(12, 1fr);
+   grid-template-rows: repeat(3, 1fr);
+   justify-content: center;
+   gap: 1em;
+}
+
+.a{
+   grid-column: 3/6;
+   grid-row: 1;
+}
+
+.b{
+   grid-column: 8/11;
+   grid-row: 1;
+}
+
+.c{
+   grid-column: 3/6;
+   grid-row: 2;
+}
+
+.d{
+   grid-column: 8/11;
+   grid-row: 2;
+}
+
+.e{
+   grid-column: 3/6;
+   grid-row: 3;
+}
 
    #footer-principal {
       display: flex;
