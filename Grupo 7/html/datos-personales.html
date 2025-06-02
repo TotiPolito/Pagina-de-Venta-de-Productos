@@ -12,41 +12,47 @@
 
    <header class ="header">
       <div class="logo"> 
-         <img id="imagenLogo" src="/Grupo 7/img/UnlamLogo.png" alt="">
+         <a href="../index.html">
+         <img id="imagenLogo" src="/Grupo 7/img/UnlamLogo.png">
+         </a>
       </div>
+      
       <div class="buscador">
-          <input type="text">
+         <p>Buscar</p> 
+         <input type="text" class="buscador">
       </div>
+
       <div class="iconos"> 
-         iconos
+        <img src="../img/usuario.png" class="iconoUsuario">
+        <img src="../img/menu.png" class="iconoMenu">
       </div>
    </header>
 
 <main>
 <article id="Articulo">
-
+   <section>
    <p> <h6> Mi cuenta / mi usuario</h6></p>
    <p> <h1> Mi usuario </h1>  </p>
 
 <form> 
   
    <label for="email"> Ingresar Email: </label>
-   <p></p>
+   <br>
    <input type="email" id="email" name="email">
-   <p></p>
+
    <button id="botonGuardarCambios"type="submit">Guardar Cambios</button>
-   <p></p>
 
    <article id="ArticuloContraseña">
-   <label id="Contraseña" for="contraseña">Contraseña</label>
-   <p></p>
-   <input type="password" id="password" name="password">
-   <img id="botonVer" src="/Grupo 7/img/mostrar-contrasena.png" alt="">
-   <p></p>
+      <label id="Contraseña" for="contraseña">Contraseña</label>
+     <br>
+         <input type="password" id="password" name="password">
+         <img id="botonVer" src="/Grupo 7/img/mostrar-contrasena.png" alt="">
+   <br>
    </article>
+   
 </form>
    
-   <p> <h6> Mi cuenta / Datos Personales</h6></p>
+   <p> <h6> <a href="./datos-personales.html"> Mi cuenta </a>/ <a href="./datos-personales.html">Datos Personales</a></h6></p>
    <p> <h1> Datos Personales </h1> </p>
 
 <form id="formAbajo">
@@ -54,41 +60,55 @@
    <div class="cajaDeDatos">
       <div class="divCaja1">   
          <label for="nombre">Nombre</label>
-         <p></p>
+         <br>
          <input type="text" id="nombre" name="nombre"> 
       </div>
       <div class="divCaja2">   
          <label for="apellido" id="apellido">Apellido</label>
-         <p></p>
+         <br>
          <input type="text" id="apellido" >  
       </div>
       <div class="divCaja3"> 
-         TipoDNI
-         <p></p>
-         <select multiple name="TipoDNI" id="TipoDNI"></select>
-        
+        <label for="TipoDNI">Tipo de Documento</label>
+        <br>
+         <select name="TipoDNI" id="TipoDNI">
+            <option value="">DNI Argentino</option>
+            <option value="">DNI extranjero</option>
+            <option value="">Otro</option>
+         </select>
       </div>
       <div class="divCaja4"> 
-      NroDNI
+      <label for="NroDNI">NroDNI</label>
+      <br>
+      <input type="text" minlength="6" maxlength="9">
       </div>
+
       <div class="divCaja5"> 
-      FechaNacimiento   
+      <label for="FechaNacimiento">Fecha de Nacimiento</label>  
+      <br>
+      <input type="date" name="FechaNacimiento" id="FechaNacimiento">
       </div>
       <div class="divCaja6"> 
-      NroTelefono
+     <label for="NroTelefono">Numero de Telefono</label>
+     <br>
+     <input type="text">
       </div>
       <div class="divCaja7"> 
-      EmailSecundario   
+      <label for="EmailSecundario">Email Secundario</label>
+      <br>
+      <input type="text" id="EmailSecundario">
       </div>
+      
       </div>
 
-
+      
 
 
 
 
 </form>
 
+<button id="botonGuardarCambios"type="submit">Guardar Cambios</button>
 
 </article>
   

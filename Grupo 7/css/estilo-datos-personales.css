@@ -13,7 +13,8 @@ margin: 0px;
     align-items: center;
     justify-content: center;
     grid-gap: 60px;
-    margin-bottom: 10px;
+    color: white;
+    margin-bottom: 2em;
     background-color: #2f4c7f ;
     border: none;
    
@@ -33,13 +34,18 @@ margin: 0px;
     justify-content: center;
     align-items: center;
     grid-area: buscador; 
+    border-radius: 10px;
+    border:none;
+    margin-left: 1em;
 
 }
-.iconos{
+.seccionIconos{
     display: flex;
-    margin-right: 10px;
     justify-content: right;
-    grid-area: iconos; 
+    margin-right: 10px;
+    grid-area: iconos;
+    cursor: pointer;
+    max-width: 25px;
 
 }
 
@@ -50,34 +56,39 @@ justify-content: center;
 }
 
 #botonGuardarCambios{
+    display: flex;
+    justify-content: center;
     padding: 6px;
     background-color: blue;
     color: white;
     border: 2px solid blue;
     border-radius: 7px;
     cursor: pointer;
+    margin-bottom: 25px;
+    margin-top: 25px;
 }
 
 #Articulo{
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 1em;
+    padding-right: 1em;
     border: 1px solid black;
     
 }
 
+#ArticuloContraseña{
+    padding-bottom: 2em;
+    border-bottom: 1px solid rgb(124, 120, 120);
+    /* Linea de abajo de contraseña para separar la intefaz*/
+}
+
 #botonVer{
-    margin-left: 15em;
+    margin-left: 2em;
     background-size: contain;
     border: none;
     cursor: pointer;
     height: 20px;
     width: 20px;
 
-}
-
-#ArticuloContraseña{
-    border-bottom: 1px solid rgb(124, 120, 120);
-    /* Linea de abajo de contraseña para separar la intefaz*/
 }
 
 form{
@@ -87,10 +98,7 @@ form{
 
 #formAbajo{
     display: grid;
-    grid-template-areas: "nombre apellido"
-                        "Tipo Nro_Doc Fecha_Nacimiento"
-                        "Telefono Mail_Secundario";
-
+    padding-bottom: 10px;
 
 }
 
@@ -98,8 +106,9 @@ form{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
+    grid-column-gap: 40px;
+    grid-row-gap: 50px;
+    padding-bottom: 20px;
     }
     
     .divCaja1 { grid-area: 1 / 1 / 2 / 2; }
@@ -114,6 +123,7 @@ form{
     margin-top: 10px;
     background-color: #2f4c7f ;
     border: none;
+    border-bottom: 0%;
 }
 
 .contenidoFooter{
