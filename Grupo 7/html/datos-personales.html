@@ -10,25 +10,25 @@
 
 <body>
 
-   <header class ="header">
-      <div class="logo"> 
-         <a href="../index.html">
-         <img id="imagenLogo" src="/Grupo 7/img/UnlamLogo.png">
-         </a>
+   <header id="encabezado-principal">
+
+      <div class="contenido-header">
+         <img src="../assets/img/UnlamLogo.png" alt="" id="imagenLogoUnlam">
       </div>
       
-      <div class="buscador">
-         <p>Buscar</p> 
-         <input type="text" class="buscador">
+      <div class="contenido-header" id="buscador">
+         <label for="buscar">Buscar</label>
+         <input type="text" name="buscar" id="buscar">
       </div>
 
-      <div class="iconos"> 
-        <img src="../img/usuario.png" class="iconoUsuario">
-        <img src="../img/menu.png" class="iconoMenu">
+      <div class="contenido-header" id="menu">
+         <a href="./login.html">Iniciar Sesión</a>
+         <a href="../index.html">Inicio</a>
       </div>
    </header>
 
 <main>
+   <section id="TodoElFormulario">
 <article id="Articulo">
    <section>
    <p> <h6> Mi cuenta / mi usuario</h6></p>
@@ -38,14 +38,14 @@
   
    <label for="email"> Ingresar Email: </label>
    <br>
-   <input type="email" id="email" name="email">
+   <input type="email" id="email" name="email" placeholder="pepito@gmail.com" required>
 
    <button id="botonGuardarCambios"type="submit">Guardar Cambios</button>
 
    <article id="ArticuloContraseña">
       <label id="Contraseña" for="contraseña">Contraseña</label>
      <br>
-         <input type="password" id="password" name="password">
+         <input type="password" id="password" name="password" placeholder="******">
          <img id="botonVer" src="/Grupo 7/img/mostrar-contrasena.png" alt="">
    <br>
    </article>
@@ -91,7 +91,7 @@
       <div class="divCaja6"> 
      <label for="NroTelefono">Numero de Telefono</label>
      <br>
-     <input type="text">
+     <input type="tel">
       </div>
       <div class="divCaja7"> 
       <label for="EmailSecundario">Email Secundario</label>
@@ -101,23 +101,43 @@
       
       </div>
 
-      
-
-
-
-
 </form>
 
 <button id="botonGuardarCambios"type="submit">Guardar Cambios</button>
 
 </article>
-  
+</section>
 </main>
 
-<footer class="footer">
-   <div class="contenidoFooter"> 
-      <p>Todos los derechos reservados</p>
+<footer id="footer-principal">
+      
+   <div class="footer" id="footer-principal-izquierda">
+
+      <p id="sns">Redes Sociales</p>
+      <div id="sns-icons">
+         <a href="#"><img src="../assets/img/facebook.png" alt="Facebook"></a>
+         <a href="#"><img id="x" src="../assets/img/gorjeo.png" alt="X"></a>
+         <a href="#"><img src="../assets/img/instagram.png" alt="Instagram"></a>
+      </div>
+
    </div>
+
+   <div class="line"></div>
+
+   <div class="footer" id="footer-principal-centro"><img id="qr-code" src="../assets/img/qr.png" />
+   
+   </div>
+
+   <div class="line"></div>
+
+   <div class="footer" id="footer-principal-derecha">
+
+      <a href="">Productos</a>
+      <a href="">Acerca de nosotros</a>
+      <a href="">Contacto</a>
+
+   </div>
+
 </footer>
 
 </body>

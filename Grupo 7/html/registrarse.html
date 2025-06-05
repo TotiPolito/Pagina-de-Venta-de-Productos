@@ -3,9 +3,74 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title></title>
+   <link rel="stylesheet" href="../css/registrarse.css">
+   <link rel="stylesheet" href="../css/temas-colores-fuentes.css">
+   <title>Registrarse</title>
 </head>
 <body>
-   
+   <header id="encabezado-principal">
+
+      <div class="contenido-header">
+         <img src="../assets/img/UnlamLogo.png" alt="" id="imagenLogoUnlam">
+      </div>
+      
+      <div class="contenido-header" id="buscador">
+         <label for="buscar">Buscar</label>
+         <input type="text" name="buscar" id="buscar">
+      </div>
+
+      <div class="contenido-header" id="menu">
+         <a href="./login.html">Iniciar Sesión</a>
+         <a href="./datos-personales.html">Datos Personales</a>
+      </div>
+   </header>
+
+   <main>
+      <form action="#" method="post" enctype="multipart/form-data" id="registrarseForm">
+         <h1>Registrarse</h1>
+         <label for="correo">Correo:</label>
+         <input type="email" id="correo" name="correo" placeholder="Ingrese su correo" required autofocus>
+         <br>
+         <label for="contrasenia">Contraseña</label>
+         <input type="password" id="contrasenia" name="contrasenia" placeholder="Ingrese su contraseña" required>
+         <br>
+         <label for="terminos">Acepto los terminos y condiciones </label>
+         <input type="checkbox" id="terminos" name="terminos" checked>
+         <br>
+         <input type="submit" value="REGISTRARSE" id="botonRegistrarse" name="botonRegistrarse">
+         <br>
+         <p id="cuenta">
+            ¿Ya tenes una cuenta?
+         <a href="./login.html">Iniciar Sesión</a>
+         </p>
+        </form>
+   </main>
+
+   <footer id="footer-principal">
+       <div class="footer" id="footer-principal-izquierda">
+
+         <p id="sns">Redes Sociales</p>
+         <div id="sns-icons">
+            <a href="#"><img src="../assets/img/facebook.png" alt="Facebook"></a>
+            <a href="#"><img id="x" src="../assets/img/gorjeo.png" alt="X"></a>
+            <a href="#"><img src="../assets/img/instagram.png" alt="Instagram"></a>
+         </div>
+
+      </div>
+
+      <div class="line"></div>
+
+      <div class="footer" id="footer-principal-centro"><img id="qr-code" src="../assets/img/qr.png" />
+      
+      </div>
+
+      <div class="line"></div>
+
+      <div class="footer" id="footer-principal-derecha">
+
+         <a href="../index.html">Productos</a>
+         <a href="">Acerca de nosotros</a>
+         <a href="">Contacto</a>
+   </footer>
 </body>
 </html>

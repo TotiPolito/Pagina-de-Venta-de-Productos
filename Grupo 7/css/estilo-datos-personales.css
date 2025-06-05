@@ -1,52 +1,64 @@
 ﻿/* estilos-datos-personales.css */
+@import url("temas-colores-fuentes.css");
+
+*{
+    font-family: 'Roboto Slab';
+}
 
 body
 {
-font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-margin: 0px;
+margin: 0;
+padding: 0;
+flex-direction: column;
+justify-content: center;
+width: 100%;
+min-height: 100vh;
 }
 
-.header{
-    display: grid;
-    grid-template-areas: "logo buscador iconos";
-    grid-template-columns: 1fr 1fr 1fr;
-    align-items: center;
-    justify-content: center;
-    grid-gap: 60px;
-    color: white;
+#encabezado-principal {
     margin-bottom: 2em;
-    background-color: #2f4c7f ;
-    border: none;
-   
+    display: flex;
+    height: 15vh;
+    flex-wrap: wrap;
 }
-#imagenLogo{
-    cursor: pointer;
-    border-radius: 100px;
-    padding: 10px;
-    max-width: 50px;
-}
-.logo{
-    grid-area: logo;
 
+#imagenLogoUnlam {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
 }
-.buscador{
+
+.contenido-header {
+    width: 33.3333%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    grid-area: buscador; 
-    border-radius: 10px;
-    border:none;
-    margin-left: 1em;
-
 }
-.seccionIconos{
-    display: flex;
-    justify-content: right;
-    margin-right: 10px;
-    grid-area: iconos;
-    cursor: pointer;
-    max-width: 25px;
 
+#buscador{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+#buscar{
+    width: 300px;
+    height: 40px;
+    padding: 0px 10px;
+    border-radius: 15px;
+}
+#menu{
+    display: flex;
+    gap: 2em;
+    justify-content: center;
+    align-items: center;
+}
+
+#menu a {
+    text-decoration: none;
+    color: var(--light-color-texto);
 }
 
 main {
@@ -55,17 +67,22 @@ justify-content: center;
 
 }
 
+#TodoElFormulario{
+    background-color: var(--light-color-acento-2);
+}
+
 #botonGuardarCambios{
     display: flex;
     justify-content: center;
     padding: 6px;
-    background-color: blue;
-    color: white;
-    border: 2px solid blue;
+    background-color: var(--light-color-acento-1);
+    color: var(--light-color-acento-2);
     border-radius: 7px;
     cursor: pointer;
     margin-bottom: 25px;
     margin-top: 25px;
+    font-family: 'Crete Round';
+    
 }
 
 #Articulo{
@@ -99,6 +116,7 @@ form{
 #formAbajo{
     display: grid;
     padding-bottom: 10px;
+    margin-bottom: 1em;
 
 }
 
@@ -119,18 +137,80 @@ form{
     .divCaja6 { grid-area: 3 / 1 / 4 / 2; }
     .divCaja7 { grid-area: 3 / 3 / 4 / 4; }
 
-.footer{
-    margin-top: 10px;
-    background-color: #2f4c7f ;
-    border: none;
-    border-bottom: 0%;
+/*Pie de Pagina*/
+#footer-principal {
+    display: flex;
+    width: 100%;
+    background-color: var(--light-color-acento-3);
+    align-items: center;
+    margin-top: 2em;
 }
 
-.contenidoFooter{
+.footer {
+    display: flex;
+    width: 33.3333%;
+    padding: 10px;
+}
+
+#footer-principal-izquierda {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+#footer-principal-izquierda>p {
+    font-family: "Crete Round";
+    font-size: 1.3em;
+    font-weight: 600;
+    color: var(--dark-color-texto);
+}
+
+#sns-icons {
+    display: flex;
+    gap: 15px;
+}
+
+#sns-icons>a>img {
+    width: 50px;
+}
+
+#x {
+    background-color: white;
+    border-radius: 8px;
+}
+
+#footer-principal-centro {
     display: flex;
     justify-content: center;
-    color: bisque;
+    align-items: center;
+}
 
+#qr-code {
+    width: 100px;
+    height: 100px;
+}
+
+#footer-principal-derecha {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3em;
+}
+
+#footer-principal-derecha>a {
+    text-decoration: none;
+    color: var(--dark-color-texto);
+    font-family: "Crete Round";
+    font-size: 1.2em;
+    font-weight: 600;
+    text-align: center;
+}
+
+.line {
+    height: 85px;
+    border: 1px solid var(--dark-color-texto);
 }
 
 #nombre{ grid-area: nombre;}

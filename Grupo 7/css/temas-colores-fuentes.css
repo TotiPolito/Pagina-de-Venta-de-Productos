@@ -6,18 +6,16 @@
 
 :root {
    --light-color-texto: #142108;
-   --light-color-fondo: #fafdf7;
-   --light-color-acento-1: #02d406;
-   --light-color-acento-2: #ffd2d2;
-   --light-color-acento-3: #1877f2;
-   --light-color-acento-4: #0b6ef0;
+   --light-color-fondo: #f8fef6;
+   --light-color-acento-1: #b28170;
+   --light-color-acento-2: #acc3a2;
+   --light-color-acento-3: #4f5f21;
    --dark-color-texto: #f9f6f0;
    --dark-color-fondo: #1f1b14;
-   --dark-color-acento-1: #2f4c7f;
-   --dark-color-acento-2: #1a6532;
-   --dark-color-acento-3: #3e65a8;
+   --dark-color-acento-1: #8e6759;
+   --dark-color-acento-2: #899c82;
+   --dark-color-acento-3: #3f4c1a;
    --fondo-blanco: white;
-   --light-color-texto-2: gray;
 }
 
  .light-theme {
