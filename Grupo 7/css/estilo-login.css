@@ -27,6 +27,7 @@ body {
     height: 15vh;
     flex-wrap: wrap;
     padding-top: 1em;
+    padding-bottom: 1em;
 }
 
 #encabezado-secundario>img {
