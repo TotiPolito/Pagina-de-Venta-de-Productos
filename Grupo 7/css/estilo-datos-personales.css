@@ -1,77 +1,110 @@
 ﻿/* estilos-datos-personales.css */
 @import url("temas-colores-fuentes.css");
 
-*{
+* {
     font-family: 'Roboto Slab';
+    font-size: 16px;
+    box-sizing: border-box;
 }
 
-body
-{
-margin: 0;
-padding: 0;
-flex-direction: column;
-justify-content: center;
-width: 100%;
-min-height: 100vh;
+h1{
+    font-size: 1.5em;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
 }
 
 #encabezado-principal {
-    margin-bottom: 2em;
-    display: flex;
-    height: 15vh;
-    flex-wrap: wrap;
+   display: flex;
+   height: 15vh;
+   flex-wrap: wrap;
+   padding-top: 1em;
 }
 
-#imagenLogoUnlam {
-    object-fit: contain;
-    width: 100%;
-    height: 100%;
+#encabezado-secundario > img{
+   width: 100%;
+}
+
+#img{
+   object-fit: contain;
+   width: 100%;
+   height: 100%;
 }
 
 .contenido-header {
-    width: 33.3333%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+   width: 33.3333%;
+   height: 100%;
 }
 
-#buscador{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
+#logo {
+   display: flex;
+   justify-content: center;
 }
 
-#buscar{
-    width: 300px;
-    height: 40px;
-    padding: 0px 10px;
-    border-radius: 15px;
-}
-#menu{
-    display: flex;
-    gap: 2em;
-    justify-content: center;
-    align-items: center;
+#buscador {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 1em;
 }
 
-#menu a {
-    text-decoration: none;
-    color: var(--light-color-texto);
+#login {
+   display: flex;
+   gap: 2em;
+   justify-content: center;
+   align-items: center;
+}
+
+#login>a {
+   text-decoration: none;
+   color: var(--light-color-texto);
+}
+
+#input-buscar {
+   width: 300px;
+   height: 40px;
+   padding: 0.6em 1em;
+   border-radius: 8px;
+   outline: none;
+   border: none;
+   background-color: var(--light-color-acento-5);
+   font-size: 1em;
+}
+
+#buscar {
+   display: flex;
+   position: relative;
+}
+
+#icono-buscar {
+   position: absolute;
+   right: 5px;
+   top: 8px;
+   cursor: pointer;
 }
 
 main {
-display: flex;
-justify-content: center;
+    display: flex;
+    justify-content: center;
+    padding-top: 4em;
+    padding-bottom: 4em;
+    background-color: var(--light-color-fondo);
 
 }
 
-#TodoElFormulario{
+#TodoElFormulario {
     background-color: var(--light-color-acento-2);
 }
 
-#botonGuardarCambios{
+#botonGuardarCambios {
     display: flex;
     justify-content: center;
     padding: 6px;
@@ -82,23 +115,23 @@ justify-content: center;
     margin-bottom: 25px;
     margin-top: 25px;
     font-family: 'Crete Round';
-    
+
 }
 
-#Articulo{
+#Articulo {
     padding-left: 1em;
     padding-right: 1em;
     border: 1px solid black;
-    
+
 }
 
-#ArticuloContraseña{
+#ArticuloContraseña {
     padding-bottom: 2em;
     border-bottom: 1px solid rgb(124, 120, 120);
     /* Linea de abajo de contraseña para separar la intefaz*/
 }
 
-#botonVer{
+#botonVer {
     margin-left: 2em;
     background-size: contain;
     border: none;
@@ -108,12 +141,12 @@ justify-content: center;
 
 }
 
-form{
+form {
     padding-left: 10px;
     padding-right: 10px;
 }
 
-#formAbajo{
+#formAbajo {
     display: grid;
     padding-bottom: 10px;
     margin-bottom: 1em;
@@ -127,15 +160,35 @@ form{
     grid-column-gap: 40px;
     grid-row-gap: 50px;
     padding-bottom: 20px;
-    }
-    
-    .divCaja1 { grid-area: 1 / 1 / 2 / 2; }
-    .divCaja2 { grid-area: 1 / 3 / 2 / 4; }
-    .divCaja3 { grid-area: 2 / 1 / 3 / 2; }
-    .divCaja4 { grid-area: 2 / 2 / 3 / 3; }
-    .divCaja5 { grid-area: 2 / 3 / 3 / 4; }
-    .divCaja6 { grid-area: 3 / 1 / 4 / 2; }
-    .divCaja7 { grid-area: 3 / 3 / 4 / 4; }
+}
+
+.divCaja1 {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.divCaja2 {
+    grid-area: 1 / 3 / 2 / 4;
+}
+
+.divCaja3 {
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+.divCaja4 {
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+.divCaja5 {
+    grid-area: 2 / 3 / 3 / 4;
+}
+
+.divCaja6 {
+    grid-area: 3 / 1 / 4 / 2;
+}
+
+.divCaja7 {
+    grid-area: 3 / 3 / 4 / 4;
+}
 
 /*Pie de Pagina*/
 #footer-principal {
@@ -143,7 +196,6 @@ form{
     width: 100%;
     background-color: var(--light-color-acento-3);
     align-items: center;
-    margin-top: 2em;
 }
 
 .footer {
@@ -213,6 +265,56 @@ form{
     border: 1px solid var(--dark-color-texto);
 }
 
-#nombre{ grid-area: nombre;}
-#apellido{grid-area: apellido;}
 
+
+#nombre {
+    grid-area: nombre;
+}
+
+#apellido {
+    grid-area: apellido;
+}
+
+@media (max-width: 1110px) {
+
+    /* Header  */
+    #encabezado-principal {
+        flex-direction: column;
+        height: 30vh;
+    }
+
+    .contenido-header {
+        height: 33.3333%;
+        width: 100%;
+        align-content: center;
+        justify-content: center;
+    }
+
+    /* Footer */
+    #footer-principal {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        background-color: var(--light-color-acento-3);
+    }
+
+    .footer {
+        display: flex;
+        height: 33.3333%;
+        width: 100%;
+        padding: 1em;
+    }
+
+    #footer-principal-derecha {
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    .line {
+        width: 80%;
+        height: 0;
+        border: 1px solid var(--dark-color-texto);
+    }
+
+}

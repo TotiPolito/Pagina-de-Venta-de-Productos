@@ -1,11 +1,18 @@
 ﻿/* estilos-registrarse.css */
 @import url("temas-colores-fuentes.css");
 
-*{
+* {
     font-family: 'Roboto Slab';
+    box-sizing: border-box;
+    font-size: 16px;
 }
 
-body{
+h1{
+    font-size: 1.5em;
+}
+
+
+body {
     margin: 0;
     padding: 0;
     display: flex;
@@ -19,6 +26,12 @@ body{
     display: flex;
     height: 15vh;
     flex-wrap: wrap;
+    padding-top: 1em;
+}
+
+#logo {
+    display: flex;
+    justify-content: center;
 }
 
 #imagenLogoUnlam {
@@ -30,25 +43,43 @@ body{
 .contenido-header {
     width: 33.3333%;
     height: 100%;
+}
+
+#buscador {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 1em;
 }
 
-#buscador{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
+#buscador>label {
+    width: auto;
 }
 
-#buscar{
+#input-buscar {
     width: 300px;
     height: 40px;
-    padding: 0px 10px;
-    border-radius: 15px;
+    padding: 0.6em 1em;
+    border-radius: 8px;
+    outline: none;
+    border: none;
+    background-color: var(--light-color-acento-5);
+    font-size: 1em;
 }
-#menu{
+
+#buscar {
+    display: flex;
+    position: relative;
+}
+
+#icono-buscar {
+    position: absolute;
+    right: 5px;
+    top: 8px;
+    cursor: pointer;
+}
+
+#menu {
     display: flex;
     gap: 2em;
     justify-content: center;
@@ -60,7 +91,7 @@ body{
     color: var(--light-color-texto);
 }
 
-main{
+main {
     background-color: var(--light-color-fondo);
     display: flex;
     flex-direction: column;
@@ -72,11 +103,11 @@ main{
     height: 30em;
 }
 
-h1{
+h1 {
     font-family: 'Hind Madurai';
 }
 
-#registrarseForm{
+#registrarseForm {
     background-color: var(--light-color-acento-2);
     border: 2px solid;
     padding: 10px;
@@ -90,7 +121,7 @@ label {
     width: 100px;
 }
 
-#botonRegistrarse{
+#botonRegistrarse {
     background-color: var(--light-color-acento-1);
     height: 60px;
     width: 200px;
@@ -102,7 +133,7 @@ label {
     font-family: 'Crete Round';
 }
 
-#cuenta{
+#cuenta {
     margin-top: 0;
 }
 
@@ -183,7 +214,7 @@ label {
 
 @media (max-width: 1110px) {
 
-/* Header  */   
+    /* Header  */
     #encabezado-principal {
         flex-direction: column;
         height: 30vh;

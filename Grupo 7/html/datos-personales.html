@@ -1,7 +1,8 @@
 ﻿<!DOCTYPE html>
 <html lang="es">
+
 <head>
-   <link rel="stylesheet" href="/Grupo 7/css/estilo-datos-personales.css">
+   <link rel="stylesheet" href="../css/estilo-datos-personales.css">
 
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,133 +13,144 @@
 
    <header id="encabezado-principal">
 
-      <div class="contenido-header">
-         <img src="../assets/img/UnlamLogo.png" alt="" id="imagenLogoUnlam">
-      </div>
-      
-      <div class="contenido-header" id="buscador">
-         <label for="buscar">Buscar</label>
-         <input type="text" name="buscar" id="buscar">
+      <div class="contenido-header" id="logo">
+         <a href="../index.html"><img src="../assets/img/UnlamLogo.png" alt="" id="img"></a>
       </div>
 
-      <div class="contenido-header" id="menu">
-         <a href="./login.html">Iniciar Sesión</a>
-         <a href="../index.html">Inicio</a>
+      <div class="contenido-header" id="buscador">
+         <label for="input-buscar">Buscar</label>
+         <div id="buscar">
+            <input type="text" id="input-buscar" placeholder="Gorra">
+            <img src="../assets/img/search.svg" alt="" id="icono-buscar">
+         </div>
       </div>
+
+      <div class="contenido-header" id="login">
+         <a href="./login.html">Iniciar Sesión</a>
+         <a href="./registrarse.html">Registrarse</a>
+      </div>
+
+
    </header>
 
-<main>
-   <section id="TodoElFormulario">
-<article id="Articulo">
-   <section>
-   <p> <h6> Mi cuenta / mi usuario</h6></p>
-   <p> <h1> Mi usuario </h1>  </p>
+   <main>
+      <section id="TodoElFormulario">
+         <article id="Articulo">
+            <section>
+               <p>
+               <h6> Mi cuenta / mi usuario</h6>
+               </p>
+               <p>
+               <h1> Mi usuario </h1>
+               </p>
 
-<form> 
-  
-   <label for="email"> Ingresar Email: </label>
-   <br>
-   <input type="email" id="email" name="email" placeholder="pepito@gmail.com" required>
+               <form>
 
-   <button id="botonGuardarCambios"type="submit">Guardar Cambios</button>
+                  <label for="email"> Ingresar Email: </label>
+                  <br>
+                  <input type="email" id="email" name="email" placeholder="pepito@gmail.com" required>
 
-   <article id="ArticuloContraseña">
-      <label id="Contraseña" for="contraseña">Contraseña</label>
-     <br>
-         <input type="password" id="password" name="password" placeholder="******">
-         <img id="botonVer" src="/Grupo 7/img/mostrar-contrasena.png" alt="">
-   <br>
-   </article>
-   
-</form>
-   
-   <p> <h6> <a href="./datos-personales.html"> Mi cuenta </a>/ <a href="./datos-personales.html">Datos Personales</a></h6></p>
-   <p> <h1> Datos Personales </h1> </p>
+                  <button id="botonGuardarCambios" type="submit">Guardar Cambios</button>
 
-<form id="formAbajo">
+                  <article id="ArticuloContraseña">
+                     <label id="Contraseña" for="contraseña">Contraseña</label>
+                     <br>
+                     <input type="password" id="password" name="password" placeholder="******">
+                     <img id="botonVer" src="/Grupo 7/img/mostrar-contrasena.png" alt="">
+                     <br>
+                  </article>
 
-   <div class="cajaDeDatos">
-      <div class="divCaja1">   
-         <label for="nombre">Nombre</label>
-         <br>
-         <input type="text" id="nombre" name="nombre"> 
+               </form>
+
+               <p>
+               <h6> <a href="./datos-personales.html"> Mi cuenta </a>/ <a href="./datos-personales.html">Datos
+                     Personales</a></h6>
+               </p>
+               <p>
+               <h1> Datos Personales </h1>
+               </p>
+
+               <form id="formAbajo">
+
+                  <div class="cajaDeDatos">
+                     <div class="divCaja1">
+                        <label for="nombre">Nombre</label>
+                        <br>
+                        <input type="text" id="nombre" name="nombre">
+                     </div>
+                     <div class="divCaja2">
+                        <label for="apellido" id="apellido">Apellido</label>
+                        <br>
+                        <input type="text" id="apellido">
+                     </div>
+                     <div class="divCaja3">
+                        <label for="TipoDNI">Tipo de Documento</label>
+                        <br>
+                        <select name="TipoDNI" id="TipoDNI">
+                           <option value="">DNI Argentino</option>
+                           <option value="">DNI extranjero</option>
+                           <option value="">Otro</option>
+                        </select>
+                     </div>
+                     <div class="divCaja4">
+                        <label for="NroDNI">NroDNI</label>
+                        <br>
+                        <input type="text" minlength="6" maxlength="9">
+                     </div>
+
+                     <div class="divCaja5">
+                        <label for="FechaNacimiento">Fecha de Nacimiento</label>
+                        <br>
+                        <input type="date" name="FechaNacimiento" id="FechaNacimiento">
+                     </div>
+                     <div class="divCaja6">
+                        <label for="NroTelefono">Numero de Telefono</label>
+                        <br>
+                        <input type="tel">
+                     </div>
+                     <div class="divCaja7">
+                        <label for="EmailSecundario">Email Secundario</label>
+                        <br>
+                        <input type="text" id="EmailSecundario">
+                     </div>
+
+                  </div>
+
+               </form>
+
+               <button id="botonGuardarCambios" type="submit">Guardar Cambios</button>
+
+         </article>
+      </section>
+   </main>
+
+   <footer id="footer-principal">
+      <div class="footer" id="footer-principal-izquierda">
+
+         <p id="sns">Redes Sociales</p>
+         <div id="sns-icons">
+            <a href="#"><img src="../assets/img/facebook.png" alt="Facebook"></a>
+            <a href="#"><img id="x" src="../assets/img/gorjeo.png" alt="X"></a>
+            <a href="#"><img src="../assets/img/instagram.png" alt="Instagram"></a>
+         </div>
+
       </div>
-      <div class="divCaja2">   
-         <label for="apellido" id="apellido">Apellido</label>
-         <br>
-         <input type="text" id="apellido" >  
-      </div>
-      <div class="divCaja3"> 
-        <label for="TipoDNI">Tipo de Documento</label>
-        <br>
-         <select name="TipoDNI" id="TipoDNI">
-            <option value="">DNI Argentino</option>
-            <option value="">DNI extranjero</option>
-            <option value="">Otro</option>
-         </select>
-      </div>
-      <div class="divCaja4"> 
-      <label for="NroDNI">NroDNI</label>
-      <br>
-      <input type="text" minlength="6" maxlength="9">
+
+      <div class="line"></div>
+
+      <div class="footer" id="footer-principal-centro"><img id="qr-code" src="../assets/img/qr.png" />
+
       </div>
 
-      <div class="divCaja5"> 
-      <label for="FechaNacimiento">Fecha de Nacimiento</label>  
-      <br>
-      <input type="date" name="FechaNacimiento" id="FechaNacimiento">
-      </div>
-      <div class="divCaja6"> 
-     <label for="NroTelefono">Numero de Telefono</label>
-     <br>
-     <input type="tel">
-      </div>
-      <div class="divCaja7"> 
-      <label for="EmailSecundario">Email Secundario</label>
-      <br>
-      <input type="text" id="EmailSecundario">
-      </div>
-      
-      </div>
+      <div class="line"></div>
 
-</form>
+      <div class="footer" id="footer-principal-derecha">
 
-<button id="botonGuardarCambios"type="submit">Guardar Cambios</button>
-
-</article>
-</section>
-</main>
-
-<footer id="footer-principal">
-      
-   <div class="footer" id="footer-principal-izquierda">
-
-      <p id="sns">Redes Sociales</p>
-      <div id="sns-icons">
-         <a href="#"><img src="../assets/img/facebook.png" alt="Facebook"></a>
-         <a href="#"><img id="x" src="../assets/img/gorjeo.png" alt="X"></a>
-         <a href="#"><img src="../assets/img/instagram.png" alt="Instagram"></a>
-      </div>
-
-   </div>
-
-   <div class="line"></div>
-
-   <div class="footer" id="footer-principal-centro"><img id="qr-code" src="../assets/img/qr.png" />
-   
-   </div>
-
-   <div class="line"></div>
-
-   <div class="footer" id="footer-principal-derecha">
-
-      <a href="">Productos</a>
-      <a href="">Acerca de nosotros</a>
-      <a href="">Contacto</a>
-
-   </div>
-
-</footer>
+         <a href="../index.html">Productos</a>
+         <a href="">Acerca de nosotros</a>
+         <a href="">Contacto</a>
+   </footer>
 
 </body>
+
 </html>

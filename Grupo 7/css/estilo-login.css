@@ -3,6 +3,12 @@
 
 * {
     font-family: 'Roboto Slab';
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+h1{
+    font-size: 1.5em;
 }
 
 body {
@@ -20,6 +26,7 @@ body {
     display: flex;
     height: 15vh;
     flex-wrap: wrap;
+    padding-top: 1em;
 }
 
 #encabezado-secundario>img {
@@ -35,19 +42,22 @@ body {
 .contenido-header {
     width: 33.3333%;
     height: 100%;
-    align-content: center;
 }
 
 #logo {
-   display: flex;
-   justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 
 #buscador {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 5px;
+    gap: 1em;
+}
+
+#buscador>label {
+    width: auto;
 }
 
 #login {
@@ -65,8 +75,24 @@ body {
 #input-buscar {
     width: 300px;
     height: 40px;
-    padding: 0px 10px;
-    border-radius: 15px;
+    padding: 0.6em 1em;
+    border-radius: 8px;
+    outline: none;
+    border: none;
+    background-color: var(--light-color-acento-5);
+    font-size: 1em;
+}
+
+#buscar {
+    display: flex;
+    position: relative;
+}
+
+#icono-buscar {
+    position: absolute;
+    right: 5px;
+    top: 8px;
+    cursor: pointer;
 }
 
 /*MAIN*/
@@ -198,7 +224,7 @@ a {
 
 @media (max-width: 1110px) {
 
-/* Header  */   
+    /* Header  */
     #encabezado-principal {
         flex-direction: column;
         height: 30vh;
