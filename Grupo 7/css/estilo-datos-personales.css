@@ -291,6 +291,8 @@ form {
         justify-content: center;
     }
 
+    .cajaDeDatos{
+        display: flex;
     /* Footer */
     #footer-principal {
         display: flex;
