@@ -293,6 +293,19 @@ form {
 
     .cajaDeDatos{
         display: flex;
+        flex-direction: column;
+        gap: 1.5em;
+    }
+
+    form{
+        padding: 1em;
+    }
+
+    #botonGuardarCambios {
+        justify-content: center;
+        width: 100%;
+    }
+
     /* Footer */
     #footer-principal {
         display: flex;
