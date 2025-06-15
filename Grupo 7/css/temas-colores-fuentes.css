@@ -17,7 +17,9 @@
    --dark-color-acento-1: #8e6759;
    --dark-color-acento-2: #899c82;
    --dark-color-acento-3: #3f4c1a;
+   --dark-color-acento-4: #96b989;
    --fondo-blanco: white;
+   --fondo-negro: black;
 }
 
  .light-theme {
