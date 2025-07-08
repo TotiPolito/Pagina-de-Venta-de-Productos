@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="../css/registrarse.css">
+   <link rel="stylesheet" href="../css/temas-colores-fuentes.css">
+   <title>Registrarse</title>
+</head>
+<body>
+   <header id="encabezado-principal">
+      <div class="contenido-header" id="logo">
+         <a href="../index.html"><img src="../assets/img/UnlamLogo.png" alt="" id="imagenLogoUnlam"></a>
+      </div>
+      <div class="contenido-header" id="menu">
+         <a href="./datos-personales.html">Datos Personales</a>
+      </div>
+   </header>
+   <main>
+      <!-- formulario-->
+      <form action="#" method="post" enctype="multipart/form-data" id="registrarseForm" novalidate>
+         <h1>Registrarse</h1>
+         <!--correo-->
+         <label for="correo" >Correo:</label>
+         <input type="email" id="correo" name="correo" placeholder="Ingrese su correo">
+         <p id="errorMail"></p>
+         <!--contraseña-->
+         <p>La contraseña debe tener al menos una minúscula, una mayúscula, un número y un carácter especial.</p>
+         <div class="contraBox">
+            <label for="contrasenia">Contraseña:</label>
+            <input type="password" id="contrasenia" name="contrasenia" placeholder="Ingrese su contraseña">
+            <img id="botonVer" class="eyeImg" src="../assets/img/mostrar-contrasena.png" alt="mostrarContraseña">
+         </div>
+         <p id="errorPass">6 carácteres mínimo</p>
+         <!--validar contraseña-->
+         <div>
+            <p id="checkMinuscula">Minúsculas: ❌</p>
+            <p id="checkMayuscula">Mayúsculas: ❌</p>
+            <p id="checkNumero">Números: ❌</p>
+            <p id="checkEspecial">Carácteres Especiales: ❌</p>
+         </div>
+         <!--repetir contraseña-->
+         <div class="contraBox">
+            <label for="contrasenia">Confirmar:</label>
+            <input type="password" id="contrasenia2" name="contrasenia" placeholder="Repita su contraseña">
+            <img id="botonVer2" class="eyeImg" src="../assets/img/mostrar-contrasena.png" alt="mostrarContraseña">
+         </div>
+         <p id="errorPass2"></p>
+         <!--Check términos-->
+         <div id="checkBox">
+            <label for="terminos" id="termLabel">Acepto los terminos y condiciones </label>
+         <input type="checkbox" id="terminos" name="terminos">
+         <br>
+         </div>
+         <!--botón submit-->
+         <input type="submit" value="REGISTRARSE" id="botonRegistrarse" name="botonRegistrarse">
+         <br>
+         <p id="cuenta">¿Ya tenes una cuenta?<a href="./login.html">Iniciar Sesión</a></p>
+        </form>
+   </main>
+   <!--FOOTER-->
+   <footer id="footer-principal">
+       <div class="footer" id="footer-principal-izquierda">
+         <p id="sns">Redes Sociales</p>
+         <div id="sns-icons">
+            <a href="#"><img src="../assets/img/facebook.png" alt="Facebook"></a>
+            <a href="#"><img id="x" src="../assets/img/gorjeo.png" alt="X"></a>
+            <a href="#"><img src="../assets/img/instagram.png" alt="Instagram"></a>
+         </div>
+      </div>
+      <div class="line"></div>
+      <div class="footer" id="footer-principal-centro">
+         <img id="qr-code" src="../assets/img/qr.png" />
+      </div>
+      <div class="line"></div>
+      <div class="footer" id="footer-principal-derecha">
+         <a href="../index.html">Productos</a>
+         <a href="">Acerca de nosotros</a>
+         <a href="">Contacto</a>
+      </div>
+   </footer>
+   <script src="../js/registrarse.js"></script>
+</body>
+</html>
