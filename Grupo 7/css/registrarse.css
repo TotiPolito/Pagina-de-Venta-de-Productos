@@ -26,6 +26,7 @@ body {
     display: flex;
     height: 15vh;
     flex-wrap: wrap;
+    justify-content: center;
     padding-top: 1em;
     padding-bottom: 1em;
 }
@@ -46,39 +47,6 @@ body {
     height: 100%;
 }
 
-#buscador {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1em;
-}
-
-#buscador>label {
-    width: auto;
-}
-
-#input-buscar {
-    width: 300px;
-    height: 40px;
-    padding: 0.6em 1em;
-    border-radius: 8px;
-    outline: none;
-    border: none;
-    background-color: var(--light-color-acento-5);
-    font-size: 1em;
-}
-
-#buscar {
-    display: flex;
-    position: relative;
-}
-
-#icono-buscar {
-    position: absolute;
-    right: 5px;
-    top: 8px;
-    cursor: pointer;
-}
 
 #menu {
     display: flex;
@@ -122,6 +90,14 @@ label {
     width: 100px;
 }
 
+#correo{
+    margin-right: 29px;
+}
+
+#errorMail{
+    margin: 0;
+}
+
 #botonRegistrarse {
     background-color: var(--light-color-acento-1);
     height: 60px;
@@ -132,6 +108,31 @@ label {
     margin-bottom: 0;
     font-size: larger;
     font-family: 'Crete Round';
+}
+
+.contraBox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.eyeImg {
+    background-size: contain;
+    border: none;
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+    margin-left: 5px;
+}
+
+#checkBox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#termLabel{
+    width: 200px;
 }
 
 #cuenta {

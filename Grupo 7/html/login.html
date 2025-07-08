@@ -13,32 +13,26 @@
          <a href="../index.html"><img src="../assets/img/UnlamLogo.png" alt="" id="img"></a>
       </div>
 
-      <div class="contenido-header" id="buscador">
-         <label for="input-buscar">Buscar</label>
-         <div id="buscar">
-            <input type="text" id="input-buscar" placeholder="Gorra">
-            <img src="../assets/img/search.svg" alt="" id="icono-buscar">
-         </div>
-      </div>
-
-      <div class="contenido-header" id="login">
-         <a href="./login.html">Iniciar Sesión</a>
-         <a href="./registrarse.html">Registrarse</a>
-      </div>
-
-
    </header>
    <main>
-      <form action="#" method="post" enctype="multipart/form-data" id="loginForm">
+      <!-- formulario -->
+      <form action="#" method="post" enctype="multipart/form-data" id="loginForm" novalidate>
          <h1>Iniciar Sesión</h1>
+         <!--correo -->
          <label for="correo">Correo:</label>
-         <input type="email" id="correo" name="correo">
+         <input type="email" id="correo" name="correo" placeholder="Ingrese su correo">
+         <p id="errorMail"></p>
          <br>
-         <label for="contrasenia">Contraseña:</label>
-         <input type="password" id="contrasenia" name="contrasenia">
-         <br>
+         <!-- contraseña -->
+         <div id="boxContrasenia">
+            <label for="contrasenia">Contraseña:</label>
+         <input type="password" id="contrasenia" name="contrasenia" placeholder="Ingrese su contraseña">
+         <img id="botonVer" src="../assets/img/mostrar-contrasena.png" alt="">
+         </div>
+         <p id="errorPass"></p>
          <a href="../html/recuperar-password.html" id="askPassword">¿Olvidaste tu contraseña?</a>
          <br>
+         <!-- botón iniciar sesión -->
          <input type="submit" value="INICIAR SESIÓN" id="botonLogin" name="botonLogin">
          <br>
          <p id="askAccount">¿No tenés cuenta? <a href="../html/registrarse.html">Registrate</a></p>
@@ -67,13 +61,11 @@
       <div class="line"></div>
 
       <div class="footer" id="footer-principal-derecha">
-
-         <a href="">Productos</a>
-         <a href="">Acerca de nosotros</a>
-         <a href="">Contacto</a>
-
+         <a href="../index.html">Productos</a>
+         <a href="#">Acerca de nosotros</a>
+         <a href="#">Contacto</a>
       </div>
-
    </footer>
+   <script src="../js/login.js"></script>
 </body>
 </html>
