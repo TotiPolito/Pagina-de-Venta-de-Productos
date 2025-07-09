@@ -1,11 +1,13 @@
 ﻿<!DOCTYPE html>
 <html lang="es">
+
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="../css/estilo-login.css">
-   <title>login</title>
+   <title>Iniciar sesión</title>
 </head>
+
 <body>
    <header id="encabezado-principal">
 
@@ -13,8 +15,14 @@
          <a href="../index.html"><img src="../assets/img/UnlamLogo.png" alt="" id="img"></a>
       </div>
 
+      <div class="contenido-header" id="login">
+         <div class="modo-vista" id="modo-vista">
+            <img src="../assets/img/light-mode.svg" id="modo" alt="">
+         </div>
+      </div>
+
    </header>
-   <main>
+   <main id="main">
       <!-- formulario -->
       <form action="#" method="post" enctype="multipart/form-data" id="loginForm" novalidate>
          <h1>Iniciar Sesión</h1>
@@ -26,8 +34,8 @@
          <!-- contraseña -->
          <div id="boxContrasenia">
             <label for="contrasenia">Contraseña:</label>
-         <input type="password" id="contrasenia" name="contrasenia" placeholder="Ingrese su contraseña">
-         <img id="botonVer" src="../assets/img/mostrar-contrasena.png" alt="">
+            <input type="password" id="contrasenia" name="contrasenia" placeholder="Ingrese su contraseña">
+            <img id="botonVer" src="../assets/img/mostrar-contrasena.png" alt="">
          </div>
          <p id="errorPass"></p>
          <a href="../html/recuperar-password.html" id="askPassword">¿Olvidaste tu contraseña?</a>
@@ -36,11 +44,12 @@
          <input type="submit" value="INICIAR SESIÓN" id="botonLogin" name="botonLogin">
          <br>
          <p id="askAccount">¿No tenés cuenta? <a href="../html/registrarse.html">Registrate</a></p>
-         <p>Al continuar, confirmo que he leído y aceptado los <br> <a href="#">Términos y Condiciones</a> y las <a href="#">Políticas de Privacidad</a>.</p>
+         <p>Al continuar, confirmo que he leído y aceptado los <br> <a href="#">Términos y Condiciones</a> y las <a
+               href="#">Políticas de Privacidad</a>.</p>
       </form>
    </main>
    <footer id="footer-principal">
-      
+
       <div class="footer" id="footer-principal-izquierda">
 
          <p id="sns">Redes Sociales</p>
@@ -55,7 +64,7 @@
       <div class="line"></div>
 
       <div class="footer" id="footer-principal-centro"><img id="qr-code" src="../assets/img/qr.png" />
-      
+
       </div>
 
       <div class="line"></div>
@@ -68,4 +77,5 @@
    </footer>
    <script src="../js/login.js"></script>
 </body>
+
 </html>

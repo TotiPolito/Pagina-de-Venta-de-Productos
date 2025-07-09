@@ -11,7 +11,6 @@ h1{
     font-size: 1.5em;
 }
 
-
 body {
     margin: 0;
     padding: 0;
@@ -22,12 +21,50 @@ body {
     min-height: 100vh;
 }
 
+.modo-vista {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.5em;
+    height: 2.5em;
+    border-radius: 50%;
+    background-color: var(--light-color-acento-5);
+    color: var(--light-color-texto);
+}
+
+.modo-vista-dark {
+    background-color: var(--dark-color-acento-3) !important;
+}
+
+.modo-vista>img {
+    cursor: pointer;
+    width: 2em;
+    height: 2em;
+}
+
+#login {
+   display: flex;
+   gap: 2em;
+   justify-content: center;
+   align-items: center;
+}
+
+#login>a {
+   text-decoration: none;
+   color: var(--light-color-texto);
+}
+
+.login-dark>a {
+   color: var(--dark-color-texto) !important;
+}
+
 #encabezado-principal {
    display: flex;
    height: 15vh;
    flex-wrap: wrap;
    padding-top: 1em;
    padding-bottom: 1em;
+   justify-content: space-between;
 }
 
 #encabezado-secundario > img{

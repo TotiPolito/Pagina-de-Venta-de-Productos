@@ -310,7 +310,6 @@ function darkMode() {
         a.classList.toggle('articulo-categoria-dark');
     }
 
-    document.getElementById('footer-principal').classList.toggle('footer-principal-dark');
 
     if (localStorage.getItem("modo") == "false") {
 
@@ -329,3 +328,31 @@ let botonModo = document.getElementById('modo');
 botonModo.addEventListener('click', () => {
     darkMode();
 })
+
+function cargarModoOscuroInicio() {
+    if (localStorage.getItem("modo") == "true") {
+        document.body.classList.add('body-oscuro');
+        document.getElementById('encabezado-principal').classList.add('encabezado-principal-dark');
+        document.getElementById('modo-vista').classList.add('modo-vista-dark');
+        document.getElementById('heart').classList.add('modo-vista-dark');
+        document.getElementById('login').classList.add('login-dark');
+
+        let modo = document.getElementById('modo');
+
+        if (localStorage.getItem("modo") == "false") {
+            modo.src = '../assets/img/light-mode.svg';
+        } else {
+            modo.src = '../assets/img/dark-mode.svg';
+        }
+
+        let articulos = document.getElementsByClassName('articulo-categoria');
+        let a;
+
+        for (a of articulos) {
+
+            a.classList.add('articulo-categoria-dark');
+        }
+
+    }
+}
+cargarModoOscuroInicio();

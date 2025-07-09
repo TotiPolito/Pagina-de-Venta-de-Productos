@@ -10,7 +10,9 @@ if (!localStorage.getItem("favoritos")) {
    favoritos = JSON.parse(localStorage.getItem("favoritos"));
 }
 
+
 /* ----------------------- Carga de datos --------------------------- */
+
 
 let mostrarInfo = document.getElementById("mostrarInfo");
 let portadas;

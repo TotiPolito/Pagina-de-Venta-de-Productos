@@ -47,7 +47,6 @@ function darkMode() {
         a.classList.toggle('articulo-categoria-dark');
     }
 
-    document.getElementById('footer-principal').classList.toggle('footer-principal-dark');
 
     if (localStorage.getItem("modo") == "false") {
 
