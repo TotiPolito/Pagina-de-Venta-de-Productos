@@ -205,11 +205,11 @@ a {
     /* Header  */
     #encabezado-principal {
         flex-direction: column;
-        height: 30vh;
+        height: 15vh;
     }
 
     .contenido-header {
-        height: 33.3333%;
+        height: 100%;
         width: 100%;
         align-content: center;
         justify-content: center;

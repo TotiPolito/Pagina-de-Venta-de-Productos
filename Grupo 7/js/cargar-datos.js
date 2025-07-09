@@ -28,15 +28,18 @@ linksCategorias.forEach((linkCategoria) => {
          l.classList.remove('navegacion-activo');
          l.classList.remove('navegacion-activo-dark');
       });
+
       if (localStorage.getItem("modo") == "true") {
          this.classList.add('navegacion-activo-dark');
       } else {
          this.classList.add('navegacion-activo');
       }
+
       items.forEach((item, index) => {
          const { Categoria, Id, Nombre, Autor, Portada, Descripcion, Rating } = item;
-         //const personalizados = Object.keys(item).filter(key => key.startsWith("personalizado_"));
+
          if (linkCategoria.innerText != Categoria) return;
+         
          if (localStorage.getItem("modo") == "true") {
             contenedorCards.innerHTML += `<article id="${Id}" class="articulo-categoria articulo-categoria-dark">
             <header class="header-articulo">
@@ -58,6 +61,7 @@ linksCategorias.forEach((linkCategoria) => {
             document.body.classList.add('body-oscuro');
             document.getElementById('encabezado-principal').classList.add('encabezado-principal-dark');
             document.getElementById('modo-vista').classList.add('modo-vista-dark');
+            document.getElementById('heart').classList.add('modo-vista-dark');
             document.getElementById('login').classList.add('login-dark');
             document.getElementById('contenedor-carrousel').classList.add('contenedor-carrousel-dark');
             document.getElementById('contenedor-carrousel').classList.remove('slider-nav-dark');

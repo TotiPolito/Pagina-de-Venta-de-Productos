@@ -219,11 +219,11 @@ label {
     /* Header  */
     #encabezado-principal {
         flex-direction: column;
-        height: 30vh;
+        height: 20vh;
     }
 
     .contenido-header {
-        height: 33.3333%;
+        height: 50%;
         width: 100%;
         align-content: center;
         justify-content: center;
