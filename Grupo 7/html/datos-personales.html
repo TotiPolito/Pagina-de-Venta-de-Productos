@@ -49,14 +49,16 @@
                   <label for="email"> Ingresar Email: </label>
                   <br>
                   <input type="email" id="email" name="email" placeholder="pepito@gmail.com" required>
-
-                  <button id="botonGuardarCambios" type="submit">Guardar Cambios</button>
+                  <p id="error-Email">Ingrese Un Mail Valido</p>
+                  <button class="BotonGuardar" id="botonGuardarEmail" type="submit">Guardar Email</button>
 
                   <article id="ArticuloContraseña">
                      <label id="Contraseña" for="contraseña">Contraseña</label>
                      <br>
                      <input type="password" id="password" name="password" placeholder="******">
-                     <img id="botonVer" src="../assets/img/mostrar-contrasena.png" alt="">
+                     <img id="botonVer" src="../assets/img/mostrar-contrasena.png">
+                     <p id="error-Contraseña"> La contraseña debe tener al menos 6 caracteres, una mayúscula, una minúscula, un número y un símbolo.</p>
+
                      <br>
                   </article>
 
@@ -77,11 +79,13 @@
                         <label for="nombre">Nombre</label>
                         <br>
                         <input type="text" id="nombre" name="nombre">
+                        <p id="error-nombre">Carácter inválido para este campo</p>
                      </div>
                      <div class="divCaja2">
-                        <label for="apellido" id="apellido">Apellido</label>
+                        <label for="apellido">Apellido</label>
                         <br>
                         <input type="text" id="apellido">
+                        <p id="error-Apellido">Carácter inválido para este campo</p>
                      </div>
                      <div class="divCaja3">
                         <label for="TipoDNI">Tipo de Documento</label>
@@ -95,30 +99,35 @@
                      <div class="divCaja4">
                         <label for="NroDNI">NroDNI</label>
                         <br>
-                        <input type="text" minlength="6" maxlength="9">
+                        <input type="text" id="NroDNI" minlength="6" maxlength="9">
+                        <p id="error-DNI">Carácter inválido para este campo</p>
                      </div>
-
                      <div class="divCaja5">
                         <label for="FechaNacimiento">Fecha de Nacimiento</label>
                         <br>
                         <input type="date" name="FechaNacimiento" id="FechaNacimiento">
+                        <p id="error-Fecha">Ingrese una fecha valida</p>
+
                      </div>
                      <div class="divCaja6">
                         <label for="NroTelefono">Numero de Telefono</label>
                         <br>
-                        <input type="tel">
+                        <input type="tel" id="NroTelefono">
+                        <p id="error-Telefono">Carácter inválido para este campo</p>
                      </div>
                      <div class="divCaja7">
                         <label for="EmailSecundario">Email Secundario</label>
                         <br>
                         <input type="text" id="EmailSecundario">
+                        <p id="error-EmailSecundario">Ingrese Un Mail Valido</p>
+
                      </div>
 
                   </div>
 
                </form>
 
-               <button id="botonGuardarCambios" type="submit">Guardar Cambios</button>
+               <button class="BotonGuardar" id="botonGuardarCambios" type="submit">Guardar Cambios</button>
 
          </article>
       </section>
@@ -150,7 +159,7 @@
          <a href="">Acerca de nosotros</a>
          <a href="">Contacto</a>
    </footer>
-
+   <script src="../js/datos-personales.js"></script>
 </body>
 
 </html>
