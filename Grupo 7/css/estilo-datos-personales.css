@@ -99,7 +99,18 @@ main {
 
 .TodoElFormulario-dark {
     background-color: var(--dark-color-acento-1) !important;
+    color: var(--dark-color-texto);
 }
+
+.link2 {
+    text-decoration: none;
+    color: var(--light-color-texto);
+}
+
+.link2-dark {
+    color: var(--dark-color-texto);
+}
+
 
 .BotonGuardar {
     display: flex;

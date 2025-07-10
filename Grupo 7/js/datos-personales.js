@@ -1,10 +1,14 @@
+if (localStorage.getItem("modo") == null) {
+    localStorage.setItem("modo", "false");
+}
+
 const botonGuardarCambios = document.getElementById("botonGuardarCambios");
 
 // Validacion de Nombre
 const Nombre = document.getElementById("nombre");
 const errorNombre = document.getElementById("error-nombre");
 
-Nombre.addEventListener("input", function()  {
+Nombre.addEventListener("input", function () {
     const valor = Nombre.value;
 
     if (/^[a-zA-Z\s]*$/.test(valor)) {
@@ -20,10 +24,10 @@ Nombre.addEventListener("input", function()  {
 const Apellido = document.getElementById("apellido");
 const ErrorApellido = document.getElementById("error-Apellido");
 
-Apellido.addEventListener("input", function(){
+Apellido.addEventListener("input", function () {
     const valor = Apellido.value;
 
-    if(/^[a-zA-Z\s]*$/.test(valor)){
+    if (/^[a-zA-Z\s]*$/.test(valor)) {
         ErrorApellido.style.visibility = "hidden";
         Apellido.style.border = "1px solid #ccc";
     } else {
@@ -36,10 +40,10 @@ Apellido.addEventListener("input", function(){
 const NroDNI = document.getElementById("NroDNI");
 const ErrorDNI = document.getElementById("error-DNI");
 
-NroDNI.addEventListener("input", function(){
+NroDNI.addEventListener("input", function () {
     const valor = NroDNI.value;
 
-    if(/^\d*$/.test(valor)){
+    if (/^\d*$/.test(valor)) {
         ErrorDNI.style.visibility = "hidden";
         NroDNI.style.border = "1px solid #ccc";
     } else {
@@ -53,10 +57,10 @@ NroDNI.addEventListener("input", function(){
 const NroTelefono = document.getElementById("NroTelefono");
 const ErrorTelefono = document.getElementById("error-Telefono");
 
-NroTelefono.addEventListener("input", function(){
+NroTelefono.addEventListener("input", function () {
     const valor = NroTelefono.value;
 
-    if(/^\d*$/.test(valor)){
+    if (/^\d*$/.test(valor)) {
         ErrorTelefono.style.visibility = "hidden";
         NroTelefono.style.border = "1px solid #ccc";
     } else {
@@ -70,7 +74,7 @@ NroTelefono.addEventListener("input", function(){
 const FechaNacimiento = document.getElementById("FechaNacimiento");
 const ErrorFecha = document.getElementById("error-Fecha");
 
-FechaNacimiento.addEventListener("input", function()  {
+FechaNacimiento.addEventListener("input", function () {
     const fechaIngresada = new Date(FechaNacimiento.value);
     const hoy = new Date();
 
@@ -104,11 +108,11 @@ function validarEmail(input, errorElement) {
     }
 }
 
-Email.addEventListener("input", function() {
+Email.addEventListener("input", function () {
     validarEmail(Email, ErrorEmail);
 });
 
-EmailSecundario.addEventListener("input", function() {
+EmailSecundario.addEventListener("input", function () {
     validarEmail(EmailSecundario, ErrorEmailSecundario);
 });
 
@@ -119,7 +123,7 @@ const errorContraseña = document.getElementById("error-Contraseña");
 
 const ContraseñaValida = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[\W_]).{6,}$/;
 
-contraseña.addEventListener("input", function() {
+contraseña.addEventListener("input", function () {
     const valor = contraseña.value;
 
     if (ContraseñaValida.test(valor)) {
@@ -135,12 +139,12 @@ contraseña.addEventListener("input", function() {
 const ojo = document.getElementById("botonVer");
 
 //Ver
-ojo.addEventListener("mousedown", function(){
+ojo.addEventListener("mousedown", function () {
     contraseña.type = "text";
 })
 
 //Ocultar
-ojo.addEventListener("mouseup", function(){
+ojo.addEventListener("mouseup", function () {
     contraseña.type = "password";
 })
 
@@ -153,6 +157,10 @@ function darkMode() {
     document.getElementById('TodoElFormulario').classList.toggle('TodoElFormulario-dark');
     document.getElementById('botonGuardarCambios').classList.toggle('BotonGuardar-dark');
     document.getElementById('botonGuardarEmail').classList.toggle('BotonGuardar-dark');
+    document.querySelectorAll('a.link2').forEach((link) => {
+        console.log(link);
+        link.classList.toggle('link2-dark');
+    })
 
     let modo = document.getElementById('modo');
 
@@ -184,6 +192,9 @@ function cargarModoOscuroInicio() {
         document.getElementById('TodoElFormulario').classList.add('TodoElFormulario-dark');
         document.getElementById('botonGuardarCambios').classList.add('BotonGuardar-dark');
         document.getElementById('botonGuardarEmail').classList.add('BotonGuardar-dark');
+        document.querySelectorAll('a.link2').forEach((link) => {
+            link.classList.add('link2-dark');
+        })
 
         let modo = document.getElementById('modo');
 

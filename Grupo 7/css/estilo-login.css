@@ -348,7 +348,7 @@ a {
     }
 
     .contenido-header {
-        width: 33.3%;
+        width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
