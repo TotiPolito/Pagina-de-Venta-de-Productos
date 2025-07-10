@@ -675,6 +675,24 @@ main {
 
 }
 
+@media only screen and (max-width: 990px) {
+
+   .carrousel>p {
+      bottom: 1em;
+      padding: 0.6em 0.6em;
+   }
+}
+
+@media only screen and (max-width: 800px) {
+
+   .carrousel>p {
+      bottom: 0.8em;
+      padding: 0.4em 0.4em;
+      font-size: 0.8em;
+   }
+
+}
+
 
 @media only screen and (max-width: 500px) {
 

@@ -164,9 +164,12 @@ label {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 
 .eyeImg {
+    position: absolute;
+    right: 235px;
     background-size: contain;
     border: none;
     cursor: pointer;

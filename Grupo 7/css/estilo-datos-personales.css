@@ -7,7 +7,7 @@
     box-sizing: border-box;
 }
 
-h1{
+h1 {
     font-size: 1.5em;
 }
 
@@ -43,42 +43,42 @@ body {
 }
 
 #encabezado-principal {
-   display: flex;
-   height: 15vh;
-   flex-wrap: wrap;
-   padding-top: 1em;
-   padding-bottom: 1em;
-   justify-content: space-between;
+    display: flex;
+    height: 15vh;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    justify-content: space-between;
 }
-.encabezado-principal-dark{
+
+.encabezado-principal-dark {
     background-color: var(--fondo-negro) !important;
 }
 
-#encabezado-secundario > img{
-   width: 100%;
+#encabezado-secundario>img {
+    width: 100%;
 }
 
-#img{
-   object-fit: contain;
-   width: 100%;
-   height: 100%;
+#img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
 }
 
 .contenido-header {
-   width: 33.3333%;
-   height: 100%;
+    width: 33.3333%;
+    height: 100%;
 }
 
 #logo {
-   display: flex;
-   justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 
 #login {
-   display: flex;
-   gap: 2em;
-   justify-content: center;
-   align-items: center;
+    display: flex;
+    gap: 2em;
+    justify-content: center;
+    align-items: center;
 }
 
 main {
@@ -89,18 +89,19 @@ main {
     background-color: var(--light-color-fondo);
 }
 
-.main-dark{
-    background-color: var(--dark-color-fondo)!important;
+.main-dark {
+    background-color: var(--dark-color-fondo) !important;
 }
 
 #TodoElFormulario {
     background-color: var(--light-color-acento-2);
 }
 
-.TodoElFormulario-dark{
-    background-color: var(--dark-color-acento-1)!important;
+.TodoElFormulario-dark {
+    background-color: var(--dark-color-acento-1) !important;
 }
-.BotonGuardar{
+
+.BotonGuardar {
     display: flex;
     justify-content: center;
     padding: 6px;
@@ -113,20 +114,28 @@ main {
     font-family: 'Crete Round';
 
 }
-.BotonGuardar-dark{
-    background-color: var(--dark-color-acento-2)!important;
+
+.BotonGuardar-dark {
+    background-color: var(--dark-color-acento-2) !important;
     color: var(--dark-color-texto);
 }
 
 
-#error-Email, #error-Contraseña, #error-EmailSecundario, #error-Telefono, #error-Fecha, #error-DNI, #error-Apellido, #error-nombre{
-    color: red; 
-    font-size: 1em; 
-    margin: 0.5em 0 0 0; 
-    visibility: hidden; 
+#error-Email,
+#error-Contraseña,
+#error-EmailSecundario,
+#error-Telefono,
+#error-Fecha,
+#error-DNI,
+#error-Apellido,
+#error-nombre {
+    color: red;
+    font-size: 1em;
+    margin: 0.5em 0 0 0;
+    visibility: hidden;
     height: 1em;
 }
- 
+
 
 #Articulo {
     padding-left: 1em;
@@ -137,6 +146,9 @@ main {
 }
 
 #ArticuloContraseña {
+    display: flex;
+    flex-direction: column;
+    position: relative;
     padding-bottom: 2em;
     border-bottom: 1px solid rgb(124, 120, 120);
     /* Linea de abajo de contraseña para separar la intefaz*/
@@ -149,6 +161,13 @@ main {
     cursor: pointer;
     height: 20px;
     width: 20px;
+    position: absolute;
+    left: 163px;
+    bottom: 81px;
+}
+
+#password {
+    width: 204px;
 }
 
 form {
@@ -285,34 +304,42 @@ form {
     grid-area: apellido;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1110px) {
 
     /* Header  */
     #encabezado-principal {
-        flex-direction: row;
-        height: 10em;
+        height: auto;
+        padding: 1em 0;
+        gap: 1em;
+    }
+
+    #img {
+        max-width: 100px;
+        height: auto;
     }
 
     .contenido-header {
-        height: 40%;
-        width: 49%;
+        height: auto;
+        width: 100%;
         align-content: center;
         justify-content: center;
+        display: flex;
     }
-    .cajaDeDatos{
-    display: flex;
-    flex-direction: column;
-    gap: 1.5em;
-}
 
-   .BotonGuardar {
-    justify-content: center;
-    width: 100%;
-}
+    .cajaDeDatos {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5em;
+    }
 
-#TodoElFormulario {
-margin: 1em;
-}
+    .BotonGuardar {
+        justify-content: center;
+        width: 100%;
+    }
+
+    #TodoElFormulario {
+        margin: 1em;
+    }
 
     /* Footer */
     #footer-principal {
@@ -325,14 +352,125 @@ margin: 1em;
 
     .footer {
         display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 1em 0;
         height: 33.3333%;
         width: 100%;
-        padding: 1em;
+    }
+
+    #footer-principal-izquierda{
+        gap: 1em;
+    }
+    #footer-principal-centro{
+        gap: 1em;
+    }
+    #footer-principal-derecha{
+        gap: 1em;
+        font-size: 1em;
+    }
+
+    #sns-icons {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1em;
+    }
+
+    #qr-code {
+        width: 80px;
+        height: 80px;
+    }
+
+    .line {
+        width: 80%;
+        height: 0;
+        border: 1px solid var(--dark-color-texto);
+    }
+
+/*  celulares  */
+@media (max-width: 768px) {
+
+    /* Header */
+    #encabezado-principal {
+        height: auto;
+        padding: 1em 0;
+    }
+
+    .contenido-header {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 0.5em;
+    }
+
+    #img {
+        max-width: 50px;
+        height: auto;
+    }
+
+    /* Formulario */
+    #loginForm {
+        width: 90%;
+        padding: 1.5em;
+    }
+
+    label {
+        width: auto;
+        display: block;
+        margin-bottom: 0.3em;
+    }
+
+    input[type="email"],
+    input[type="password"] {
+        width: 100%;
+        padding: 0.5em;
+        font-size: 1em;
+    }
+
+    #boxContrasenia {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-right: 0;
+
+    }
+
+    #botonVer {
+        position: absolute;
+        top: 50%;
+        right: 1em;
+        transform: translateY(50%);
+    }
+
+    #botonLogin {
+        width: 100%;
+        height: 50px;
+        font-size: 1em;
+    }
+
+    /* Footer */
+    .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #sns-icons {
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     #footer-principal-derecha {
-        flex-direction: column;
         gap: 1em;
+    }
+
+    #footer-principal-derecha a {
+        font-size: 1em;
+    }
+
+    #qr-code {
+        width: 80px;
+        height: 80px;
     }
 
     .line {
@@ -341,3 +479,6 @@ margin: 1em;
         border: 1px solid var(--dark-color-texto);
     }
 }
+
+}
+
