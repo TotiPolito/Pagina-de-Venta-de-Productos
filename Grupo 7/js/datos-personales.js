@@ -143,3 +143,56 @@ ojo.addEventListener("mousedown", function(){
 ojo.addEventListener("mouseup", function(){
     contraseña.type = "password";
 })
+
+
+// Modo Oscuro
+function darkMode() {
+    document.getElementById('encabezado-principal').classList.toggle('encabezado-principal-dark');
+    document.getElementById('modo-vista').classList.toggle('modo-vista-dark');
+    document.getElementById('main').classList.toggle('main-dark');
+    document.getElementById('TodoElFormulario').classList.toggle('TodoElFormulario-dark');
+    document.getElementById('botonGuardarCambios').classList.toggle('BotonGuardar-dark');
+    document.getElementById('botonGuardarEmail').classList.toggle('BotonGuardar-dark');
+
+    let modo = document.getElementById('modo');
+
+    // Cambiar ícono
+    if (localStorage.getItem("modo") == "true") {
+        modo.src = '../assets/img/light-mode.svg';
+    } else {
+        modo.src = '../assets/img/dark-mode.svg';
+    }
+
+    // Guardar nuevo estado
+    if (localStorage.getItem("modo") == "false") {
+        localStorage.setItem("modo", "true");
+    } else {
+        localStorage.setItem("modo", "false");
+    }
+}
+
+let botonModo = document.getElementById('modo');
+botonModo.addEventListener('click', darkMode);
+
+function cargarModoOscuroInicio() {
+    if (localStorage.getItem("modo") == "true") {
+        document.body.classList.add('body-oscuro');
+        document.getElementById('encabezado-principal').classList.add('encabezado-principal-dark');
+        document.getElementById('modo-vista').classList.add('modo-vista-dark');
+        document.getElementById('login').classList.add('login-dark');
+        document.getElementById('main').classList.add('main-dark');
+        document.getElementById('TodoElFormulario').classList.add('TodoElFormulario-dark');
+        document.getElementById('botonGuardarCambios').classList.add('BotonGuardar-dark');
+        document.getElementById('botonGuardarEmail').classList.add('BotonGuardar-dark');
+
+        let modo = document.getElementById('modo');
+
+        if (localStorage.getItem("modo") == "false") {
+            modo.src = '../assets/img/light-mode.svg';
+        } else {
+            modo.src = '../assets/img/dark-mode.svg';
+        }
+    }
+}
+
+cargarModoOscuroInicio();

@@ -42,22 +42,6 @@ body {
     height: 2em;
 }
 
-#login {
-   display: flex;
-   gap: 2em;
-   justify-content: center;
-   align-items: center;
-}
-
-#login>a {
-   text-decoration: none;
-   color: var(--light-color-texto);
-}
-
-.login-dark>a {
-   color: var(--dark-color-texto) !important;
-}
-
 #encabezado-principal {
    display: flex;
    height: 15vh;
@@ -65,6 +49,9 @@ body {
    padding-top: 1em;
    padding-bottom: 1em;
    justify-content: space-between;
+}
+.encabezado-principal-dark{
+    background-color: var(--fondo-negro) !important;
 }
 
 #encabezado-secundario > img{
@@ -87,46 +74,11 @@ body {
    justify-content: center;
 }
 
-#buscador {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   gap: 1em;
-}
-
 #login {
    display: flex;
    gap: 2em;
    justify-content: center;
    align-items: center;
-}
-
-#login>a {
-   text-decoration: none;
-   color: var(--light-color-texto);
-}
-
-#input-buscar {
-   width: 300px;
-   height: 40px;
-   padding: 0.6em 1em;
-   border-radius: 8px;
-   outline: none;
-   border: none;
-   background-color: var(--light-color-acento-5);
-   font-size: 1em;
-}
-
-#buscar {
-   display: flex;
-   position: relative;
-}
-
-#icono-buscar {
-   position: absolute;
-   right: 5px;
-   top: 8px;
-   cursor: pointer;
 }
 
 main {
@@ -135,11 +87,18 @@ main {
     padding-top: 4em;
     padding-bottom: 4em;
     background-color: var(--light-color-fondo);
+}
 
+.main-dark{
+    background-color: var(--dark-color-fondo)!important;
 }
 
 #TodoElFormulario {
     background-color: var(--light-color-acento-2);
+}
+
+.TodoElFormulario-dark{
+    background-color: var(--dark-color-acento-1)!important;
 }
 .BotonGuardar{
     display: flex;
@@ -153,6 +112,10 @@ main {
     margin-top: 25px;
     font-family: 'Crete Round';
 
+}
+.BotonGuardar-dark{
+    background-color: var(--dark-color-acento-2)!important;
+    color: var(--dark-color-texto);
 }
 
 
@@ -169,6 +132,7 @@ main {
     padding-left: 1em;
     padding-right: 1em;
     border: 1px solid black;
+    position: relative;
 
 }
 
@@ -179,13 +143,12 @@ main {
 }
 
 #botonVer {
-    margin-left: 2em;
+    margin-left: 1em;
     background-size: contain;
     border: none;
     cursor: pointer;
     height: 20px;
     width: 20px;
-
 }
 
 form {
@@ -322,17 +285,17 @@ form {
     grid-area: apellido;
 }
 
-@media (max-width: 1110px) {
+@media (max-width: 800px) {
 
     /* Header  */
     #encabezado-principal {
-        flex-direction: column;
-        height: 30vh;
+        flex-direction: row;
+        height: 10em;
     }
 
     .contenido-header {
-        height: 33.3333%;
-        width: 100%;
+        height: 40%;
+        width: 49%;
         align-content: center;
         justify-content: center;
     }
@@ -347,6 +310,8 @@ form {
     width: 100%;
 }
 
+#TodoElFormulario {
+margin: 1em;
 }
 
     /* Footer */
@@ -375,3 +340,4 @@ form {
         height: 0;
         border: 1px solid var(--dark-color-texto);
     }
+}
