@@ -314,7 +314,14 @@ a {
 
 /*  celulares  */
 @media (max-width: 768px) {
+
+    /* Header  */
+    #encabezado-principal {
+        flex-direction: column;
+        height: 20vh;
+    }
     
+
     /* Formulario */
     #registrarseForm {
         width: 90%;
