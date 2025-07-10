@@ -48,22 +48,6 @@ OJO.addEventListener("mouseup", function () {
     CONTRA.type = "password";
 })
 
-//FORTALEZA DE CONTRASEÑA
-CONTRA.addEventListener("input", function () {
-    if (CONTRA.value.length >= 6 && CONTRA.value.length < 10) {
-        errorPass.textContent = "Contraseña débil";
-        errorPass.style.color = "orange";
-    } else if (CONTRA.value.length >= 10 && CONTRA.value.length < 16) {
-        errorPass.textContent = "Contraseña normal";
-        errorPass.style.color = "yellow";
-    } else if (CONTRA.value.length >= 16) {
-        errorPass.textContent = "Contraseña fuerte"
-        errorPass.style.color = "green";
-    } else {
-        errorPass.textContent = " "
-    }
-})
-
 /* --------------- Modo oscuro --------------------- */
 
 function darkMode() {
