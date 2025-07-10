@@ -1,3 +1,7 @@
+if (localStorage.getItem("modo") == null) {
+    localStorage.setItem("modo", "false");
+}
+
 //VALIDACIÓN DE REGISTRO:
 const FORM = document.getElementById("registrarseForm");
 
@@ -131,3 +135,67 @@ CONTRA.addEventListener("input", function(){
         espCheck.textContent = "Carácteres Especiales: ❌";
     }
 });
+
+/* --------------- Modo oscuro --------------------- */
+
+function darkMode() {
+
+    document.body.classList.toggle('body-oscuro');
+    document.getElementById('encabezado-principal').classList.toggle('encabezado-principal-dark');
+    document.getElementById('modo-vista').classList.toggle('modo-vista-dark');
+    document.getElementById('menu').classList.toggle('menu-dark');
+    document.getElementById('main').classList.toggle('main-dark');
+    document.getElementById('registrarseForm').classList.toggle('form-dark');
+    document.getElementById('botonRegistrarse').classList.toggle('boton-dark');
+
+
+    let modo = document.getElementById('modo');
+
+    if (localStorage.getItem("modo") == "true") {
+        modo.src = '../assets/img/light-mode.svg';
+    } else {
+        modo.src = '../assets/img/dark-mode.svg';
+    }
+
+
+    if (localStorage.getItem("modo") == "false") {
+
+        localStorage.setItem("modo", "true");
+
+    } else {
+
+        localStorage.setItem("modo", "false");
+
+    }
+
+
+}
+
+let botonModo = document.getElementById('modo');
+botonModo.addEventListener('click', () => {
+    darkMode();
+})
+
+
+function cargarModoOscuroInicio() {
+    if (localStorage.getItem("modo") == "true") {
+        document.body.classList.add('body-oscuro');
+        document.getElementById('encabezado-principal').classList.add('encabezado-principal-dark');
+        document.getElementById('modo-vista').classList.add('modo-vista-dark');
+        document.getElementById('menu').classList.add('menu-dark');
+        document.getElementById('main').classList.add('main-dark');
+        document.getElementById('registrarseForm').classList.add('form-dark');
+        document.getElementById('botonRegistrarse').classList.add('boton-dark');
+
+
+        let modo = document.getElementById('modo');
+
+        if (localStorage.getItem("modo") == "false") {
+            modo.src = '../assets/img/light-mode.svg';
+        } else {
+            modo.src = '../assets/img/dark-mode.svg';
+        }
+
+    }
+}
+cargarModoOscuroInicio();

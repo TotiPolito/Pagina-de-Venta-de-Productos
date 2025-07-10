@@ -22,13 +22,45 @@ body {
     min-height: 100vh;
 }
 
+.body-oscuro {
+    background-color: var(--dark-color-fondo) !important;
+   color: var(--dark-color-texto) !important;
+}
+
+/*Encabezado y Pie de Página*/
+
+.modo-vista {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.5em;
+    height: 2.5em;
+    border-radius: 50%;
+    background-color: var(--light-color-acento-5);
+    color: var(--light-color-texto);
+}
+
+.modo-vista-dark {
+    background-color: var(--dark-color-acento-3) !important;
+}
+
+.modo-vista>img {
+    cursor: pointer;
+    width: 2em;
+    height: 2em;
+}
+
 #encabezado-principal {
     display: flex;
     height: 15vh;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
     padding-top: 1em;
     padding-bottom: 1em;
+}
+
+.encabezado-principal-dark {
+    background-color: var(--fondo-negro) !important;
 }
 
 #logo {
@@ -60,6 +92,11 @@ body {
     color: var(--light-color-texto);
 }
 
+.menu-dark>a {
+   color: var(--dark-color-texto) !important;
+}
+
+/*MAIN*/
 main {
     background-color: var(--light-color-fondo);
     display: flex;
@@ -72,6 +109,11 @@ main {
     height: 30em;
 }
 
+.main-dark {
+    background-color: var(--dark-color-fondo) !important;
+}
+
+/*Formulario*/
 h1 {
     font-family: 'Hind Madurai';
 }
@@ -83,6 +125,10 @@ h1 {
     text-align: center;
     line-height: 30px;
     border-radius: 15px;
+}
+
+.form-dark {
+    background-color: var(--dark-color-acento-1) !important;
 }
 
 label {
@@ -108,6 +154,11 @@ label {
     margin-bottom: 0;
     font-size: larger;
     font-family: 'Crete Round';
+}
+
+.boton-dark {
+    background-color: var(--dark-color-acento-2) !important;
+    color: var(--dark-color-texto);
 }
 
 .contraBox{
@@ -139,6 +190,12 @@ label {
     margin-top: 0;
 }
 
+/*Vinculos*/
+a {
+    text-decoration: none;
+}
+
+/*Pie de Pagina*/
 #footer-principal {
     display: flex;
     width: 100%;
