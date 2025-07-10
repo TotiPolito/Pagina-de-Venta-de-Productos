@@ -53,7 +53,6 @@ body {
 #encabezado-principal {
     display: flex;
     height: 15vh;
-    flex-wrap: wrap;
     justify-content: space-between;
     padding-top: 1em;
     padding-bottom: 1em;
@@ -270,12 +269,12 @@ a {
     border: 1px solid var(--dark-color-texto);
 }
 
-
+/*---RESPONSIVE---*/
+/*  TABLETS:  */
 @media (max-width: 1110px) {
 
     /* Header  */
     #encabezado-principal {
-        flex-direction: column;
         height: 20vh;
     }
 
@@ -313,4 +312,55 @@ a {
         border: 1px solid var(--dark-color-texto);
     }
 
+/*  celulares  */
+@media (max-width: 768px) {
+    
+    /* Formulario */
+    #registrarseForm {
+        width: 90%;
+        padding: 1em;
+        font-size: 0.95em;
+    }
+
+    label {
+        width: 100%;
+        text-align: left;
+        margin-bottom: 0.3em;
+    }
+
+    input[type="email"],
+    input[type="password"] {
+        width: 100%;
+        padding: 0.5em;
+        margin-bottom: 0.5em;
+    }
+
+    .contraBox {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .eyeImg {
+        margin-left: 0;
+        margin-top: 0.3em;
+    }
+
+    #checkBox {
+        align-items: flex-start;
+        justify-content: center;
+
+    }
+
+    #termLabel {
+        width: 100%;
+    }
+
+    #botonRegistrarse {
+        width: 100%;
+    }
+
+    #cuenta {
+        font-size: 0.95em;
+    }
+}
 }

@@ -69,7 +69,6 @@ body {
 #encabezado-principal {
     display: flex;
     height: 15vh;
-    flex-wrap: wrap;
     background-color: var(--fondo-blanco);
     padding-top: 1em;
     padding-bottom: 1em;
