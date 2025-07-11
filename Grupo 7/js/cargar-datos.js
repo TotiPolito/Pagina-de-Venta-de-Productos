@@ -41,7 +41,7 @@ linksCategorias.forEach((linkCategoria) => {
          const { Categoria, Id, Nombre, Autor, Portada, Descripcion, Rating } = item;
 
          if (linkCategoria.innerText != Categoria) return;
-         
+
          if (localStorage.getItem("modo") == "true") {
             contenedorCards.innerHTML += `<article id="${Id}" class="articulo-categoria articulo-categoria-dark">
             <header class="header-articulo">
@@ -323,7 +323,13 @@ buscador.addEventListener("keyup", function () {
       const itemsBuscados = items.filter(item => item.Nombre.toUpperCase().startsWith(buscador.value.toUpperCase()) || item.Autor.toUpperCase().startsWith(buscador.value.toUpperCase()));
       console.log(itemsBuscados);
 
+      if (itemsBuscados.length == 0) {
+         contenedorCards.innerHTML += `<h1>No se han encontrado resultados</h1>`
+      }
+
       itemsBuscados.forEach((item, index) => {
+
+
 
          const { Categoria, Id, Nombre, Autor, Portada, Descripcion, Rating } = item;
          if (localStorage.getItem("modo") == "true") {
